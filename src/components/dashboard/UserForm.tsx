@@ -38,6 +38,18 @@ const UserForm = () => {
   const handleSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userInfo: Partial<TUser> = {};
 
+    if (data) {
+      userInfo.name = data.name;
+      userInfo.address = data.address;
+      userInfo.email = data.email;
+    }
+
+    const formData = new FormData();
+
+    if (file) {
+      formData.append('file', file);
+    }
+
     // Append userInfo and shopData as JSON strings
     formData.append('data', JSON.stringify({ ...userInfo }));
 
