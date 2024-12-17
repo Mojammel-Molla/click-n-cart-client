@@ -7,22 +7,10 @@ import {
 import { Button } from '@/components/ui/button';
 import { EllipsisVertical, LucideProps } from 'lucide-react';
 
-type TTableAction<T> = {
-  actions: {
-    key: string;
-    label: string;
-    icon: React.ForwardRefExoticComponent<
-      Omit<LucideProps, 'ref'> & React.RefAttributes<SVGSVGElement>
-    >;
-  }[];
-  onClick: (key: string, item:T) => void;
-  item: T;
-};
-
 const TableAction = <T,>({ actions, onClick, item }: TTableAction<T>) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className='outline-none'>
+      <DropdownMenuTrigger className="outline-none">
         <Button variant="light" size="icon" className="rounded-md">
           <EllipsisVertical />
         </Button>
