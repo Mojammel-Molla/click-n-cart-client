@@ -10,6 +10,7 @@ import { Label } from '../ui/label';
 
 type TOption = { label: string; value: string };
 
+//Type of selection
 type THSelect = {
   name: string;
   label?: string;
