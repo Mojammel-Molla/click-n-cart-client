@@ -42,7 +42,7 @@ const CreateProduct = ({
       value: category?.id,
       label: category?.name,
     }));
-
+  // new product data
   const formData = {
     name: product?.name,
     price: product?.price,
